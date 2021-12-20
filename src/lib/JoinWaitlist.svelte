@@ -43,9 +43,9 @@
 		</form>
 	{/if}
 	{#if $success}
-		<div class="alert alert-success whitespace-pre mt-2">
+		<div class="alert alert-success whitespace-pre mt-2 text-lg">
 			🚀 You're signed up! We'll let you know once <span
-				class="font-mono text-primary whitespace-pre">nnmbl</span
+				class="font-bold font-mono text-primary whitespace-pre">nnmbl</span
 			> is ready for early access.
 		</div>
 	{/if}

@@ -6,12 +6,14 @@
 
 	import JoinWaitlist from '$lib/JoinWaitlist.svelte';
 
-	export let letterHeight = '2.25rem';
+	export let fontSize = '2.25rem';
+
+	const SHRINK_ANIMATION_DELAY = 2000;
 
 	onMount(() => {
 		setTimeout(() => {
-			letterHeight = '0rem';
-		}, 2000);
+			fontSize = '0rem';
+		}, SHRINK_ANIMATION_DELAY);
 	});
 </script>
 
@@ -28,22 +30,22 @@
 					<h1 class="text-4xl lowercase font-mono">
 						<div class="h-12">
 							<span class="font-bold text-primary">N</span><span
-								class="letters g"
-								style="font-size: {letterHeight};">ot</span
-							><span class="letters g" style="font-size: {letterHeight};">&nbsp</span><span
+								class="letters"
+								style="font-size: {fontSize};">ot</span
+							><span class="letters" style="font-size: {fontSize};">&nbsp</span><span
 								class="font-bold text-primary">N</span
-							><span class="letters g" style="font-size: {letterHeight};">ow,</span><span
-								class="letters g"
-								style="font-size: {letterHeight};">&nbsp</span
+							><span class="letters" style="font-size: {fontSize};">ow,</span><span
+								class="letters"
+								style="font-size: {fontSize};">&nbsp</span
 							><span class="font-bold text-primary ">M</span><span
-								class="letters g"
-								style="font-size: {letterHeight};">ay</span
+								class="letters"
+								style="font-size: {fontSize};">ay</span
 							><span class="font-bold text-primary">b</span><span
-								class="letters g"
-								style="font-size: {letterHeight};">e</span
-							><span class="letters g" style="font-size: {letterHeight};">&nbsp</span><span
+								class="letters"
+								style="font-size: {fontSize};">e</span
+							><span class="letters" style="font-size: {fontSize};">&nbsp</span><span
 								class="font-bold text-primary">L</span
-							><span class="letters g" style="font-size: {letterHeight};">ater</span>
+							><span class="letters" style="font-size: {fontSize};">ater</span>
 						</div>
 						gives timing back to candidates and companies
 					</h1>
