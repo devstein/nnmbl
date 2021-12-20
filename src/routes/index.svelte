@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>nnmbl</title>
 </svelte:head>
 
 <section class="snap-y snap-proximity lg:snap-mandatory scroll-auto h-screen overflow-auto	">
