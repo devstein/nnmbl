@@ -2,66 +2,85 @@
 	import { onMount } from 'svelte';
 
 	import Icon from 'svelte-awesome/components/Icon.svelte';
-	import * as icons from 'svelte-awesome/icons';
+	import {
+		replyAll,
+		hourglass1,
+		recycle,
+		star,
+		searchPlus,
+		bellSlash,
+		sitemap,
+		volumeUp,
+		bolt,
+		smileO
+	} from 'svelte-awesome/icons';
 
 	import JoinWaitlist from '$lib/JoinWaitlist.svelte';
 
-	export let fontSize = '2.25rem';
-
+	const MD_BREAKPOINT = 768;
 	const SHRINK_ANIMATION_DELAY = 2000;
 
+	export let windowWidth;
+	export let fontSize;
+
 	onMount(() => {
+		fontSize = windowWidth > MD_BREAKPOINT ? '2.25rem' : '1.75rem';
+
 		setTimeout(() => {
 			fontSize = '0rem';
 		}, SHRINK_ANIMATION_DELAY);
 	});
 </script>
 
+<svelte:window bind:innerWidth={windowWidth} />
+
 <svelte:head>
 	<title>nnmbl</title>
 </svelte:head>
 
-<section class="snap-y snap-proximity lg:snap-mandatory scroll-auto h-screen overflow-auto	">
+<section class="md:snap-y md:snap-mandatory scroll-auto h-screen overflow-auto	">
 	<div class="hero bg-neutral-content snap-start lg:snap-center" id="main">
-		<div class="hero-content min-h-screen flex flex-row text-center text-neutral mt-12">
+		<div class="hero-content min-h-screen flex flex-row text-center text-neutral">
 			<div>
-				<div class="max-w-lg space-y-6">
-					<h1 class="text-5xl font-bold text-secondary pb-4">timing matters.</h1>
-					<h1 class="text-4xl lowercase font-mono">
+				<div class="max-w-sm md:max-w-lg space-y-6">
+					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">timing matters.</h1>
+					<h1 class="text-3xl md:text-4xl lowercase font-mono">
 						<div class="h-12">
 							<span class="font-bold text-primary">N</span><span
 								class="letters"
 								style="font-size: {fontSize};">ot</span
+							><span class="letters" style="font-size: {fontSize}; height: {windowWidth};"
+								>&nbsp</span
+							><span class="font-bold text-primary">N</span><span
+								class="letters"
+								style="font-size: {fontSize};">ow,</span
 							><span class="letters" style="font-size: {fontSize};">&nbsp</span><span
-								class="font-bold text-primary">N</span
-							><span class="letters" style="font-size: {fontSize};">ow,</span><span
+								class="font-bold text-primary ">M</span
+							><span class="letters" style="font-size: {fontSize};">ay</span><span
+								class="font-bold text-primary">b</span
+							><span class="letters" style="font-size: {fontSize};">e</span><span
 								class="letters"
 								style="font-size: {fontSize};">&nbsp</span
-							><span class="font-bold text-primary ">M</span><span
+							><span class="font-bold text-primary">L</span><span
 								class="letters"
-								style="font-size: {fontSize};">ay</span
-							><span class="font-bold text-primary">b</span><span
-								class="letters"
-								style="font-size: {fontSize};">e</span
-							><span class="letters" style="font-size: {fontSize};">&nbsp</span><span
-								class="font-bold text-primary">L</span
-							><span class="letters" style="font-size: {fontSize};">ater</span>
+								style="font-size: {fontSize};">ater</span
+							>
 						</div>
 						gives timing back to candidates and companies
 					</h1>
-					<p class="flex-1 mb-2 text-lg">
+					<p class="flex-1 mb-2 md:text-lg">
 						The proliferation of sourcing software has allowed companies to reach a broader set of
 						candidates than ever before, yet recruiting is still the number one pain point of
 						growing companies. At its core, recruiting is a matching problem, and the modern
 						recruiting stack fails to address a key element: <i>timing</i>.
 					</p>
-					<p class="flex-1 mb-2 text-lg">
+					<p class="flex-1 mb-2 md:text-lg">
 						not now, maybe later — <strong class="font-black font-mono text-primary">nnmbl</strong> —
 						takes care of timing for you.
 					</p>
 				</div>
-				<div class="w-full text-left mt-12">
-					<p class="text-base">
+				<div class="max-w-sm md:max-w-lg text-left mt-12">
+					<p class="text-sm md:text-base">
 						Be in touch.
 						<span>
 							Be <strong class="font-black font-mono text-primary">nnmbl</strong>.
@@ -80,8 +99,8 @@
 			class="hero-content min-h-screen flex flex-col-reverse text-left lg:flex-row-reverse lg:space-x-4"
 		>
 			<div class="">
-				<div class="max-w-xl mb-5">
-					<h3 class="text-5xl text-left text-accent py-8">Candidates</h3>
+				<div class="md:max-w-xl mb-5">
+					<h3 class="text-4xl md:text-5xl text-left text-accent py-8">Candidates</h3>
 					<!-- <ul class="flex flex-col text-base-100 lg:flex-row lg:space-x-4"> -->
 					<p class="text-base-100">
 						As a candidate, your inbox has become inundated by emails. If you are actively looking
@@ -97,7 +116,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={icons.replyAll} scale={2} />
+								<Icon data={replyAll} scale={2} />
 							</div>
 							<span class="text-lg">Reply</span>
 						</h5>
@@ -109,7 +128,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={icons.bellSlash} scale={2} />
+								<Icon data={bellSlash} scale={2} />
 							</div>
 							<span class="text-lg">Eliminate</span>
 						</h5>
@@ -121,7 +140,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={icons.sitemap} scale={2} />
+								<Icon data={sitemap} scale={2} />
 							</div>
 							<span class="text-lg">Organize</span>
 						</h5>
@@ -133,7 +152,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={icons.volumeUp} scale={2} />
+								<Icon data={volumeUp} scale={2} />
 							</div>
 							<span class="text-lg">Notify</span>
 						</h5>
@@ -142,7 +161,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={icons.bolt} scale={2} />
+								<Icon data={bolt} scale={2} />
 							</div>
 							<span class="text-lg">Accelerate</span>
 						</h5>
@@ -163,7 +182,7 @@
 		>
 			<div class="">
 				<div class="max-w-xl mb-5">
-					<h3 class="text-5xl text-left text-secondary py-8">Companies</h3>
+					<h3 class="text-4xl md:text-5xl text-left text-secondary py-8">Companies</h3>
 					<p class="text-neutral">
 						As a company, you spend countless hours sourcing and reaching out to qualified
 						candidates for open roles, but if you reach out at the wrong time when the candidate
@@ -180,7 +199,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-center text-secondary py-2">
 							<div class="mr-2">
-								<Icon data={icons.smileO} scale={2} />
+								<Icon data={smileO} scale={2} />
 							</div>
 							<span class="text-lg">Engage</span>
 						</h5>
@@ -189,7 +208,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-center text-secondary py-2">
 							<div class="mr-2">
-								<Icon data={icons.searchPlus} scale={2} />
+								<Icon data={searchPlus} scale={2} />
 							</div>
 							<span class="text-lg">Discover</span>
 						</h5>
@@ -201,7 +220,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-center py-2 text-secondary">
 							<div class="mr-2">
-								<Icon data={icons.star} scale={2} />
+								<Icon data={star} scale={2} />
 							</div>
 							<span class="text-lg">Maximize</span>
 						</h5>
@@ -213,7 +232,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-center py-2 text-secondary">
 							<div class="mr-2">
-								<Icon data={icons.hourglass1} scale={2} />
+								<Icon data={hourglass1} scale={2} />
 							</div>
 							<span class="text-lg">Focus</span>
 						</h5>
@@ -222,7 +241,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items font-mono text-center py-2 text-secondary">
 							<div class="mr-2">
-								<Icon data={icons.recycle} scale={2} />
+								<Icon data={recycle} scale={2} />
 							</div>
 							<span class="text-lg">Integrate</span>
 						</h5>
