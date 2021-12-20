@@ -79,7 +79,7 @@
 						takes care of timing for you.
 					</p>
 				</div>
-				<div class="max-w-sm md:max-w-lg text-left mt-12">
+				<div class="max-w-sm md:max-w-lg text-center mt-12">
 					<p class="text-sm md:text-base">
 						Be in touch.
 						<span>
@@ -256,8 +256,10 @@
 	<div class="hero bg-base-content pt-4 lg:pt-0 pb-8 snap-start lg:snap-center" id="join">
 		<div class="hero-content min-h-screen flex flex-col text-base-100">
 			<div class="w-full space-y-6 text-left">
-				<p class="text-4xl">Be in touch.</p>
-				<p class="text-4xl">Be <strong class="font-black font-mono text-primary">nnmbl</strong>.</p>
+				<p class="text-3xl md:text-4xl">Be in touch.</p>
+				<p class="text-3xl md:text-4xl">
+					Be <strong class="font-black font-mono text-primary">nnmbl</strong>.
+				</p>
 				<JoinWaitlist />
 			</div>
 		</div>
