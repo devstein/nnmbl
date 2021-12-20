@@ -1,0 +1,14 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+.vercel
+.output
+.idea/
+.eslintcache
+npm-debug.log*
+
+todos.md
