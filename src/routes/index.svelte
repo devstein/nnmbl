@@ -11,9 +11,10 @@
 		bellSlash,
 		sitemap,
 		volumeUp,
-		bolt,
 		smileO
 	} from 'svelte-awesome/icons';
+
+	import greaterOrEqual from '$lib/greaterOrEqual';
 
 	import JoinWaitlist from '$lib/JoinWaitlist.svelte';
 
@@ -26,9 +27,11 @@
 	onMount(() => {
 		fontSize = windowWidth > MD_BREAKPOINT ? '2.25rem' : '1.75rem';
 
-		setTimeout(() => {
+		const timer = setTimeout(() => {
 			fontSize = '0rem';
 		}, SHRINK_ANIMATION_DELAY);
+
+		return () => clearTimeout(timer);
 	});
 </script>
 
@@ -71,8 +74,8 @@
 					<p class="flex-1 mb-2 md:text-lg">
 						The proliferation of sourcing software has allowed companies to reach a broader set of
 						candidates than ever before, yet recruiting is still the number one pain point of
-						growing companies. At its core, recruiting is a matching problem, and the modern
-						recruiting stack fails to address a key element: <i>timing</i>.
+						growing companies. At its core, recruiting is a matching problem, not a numbers game,
+						and the modern recruiting stack fails to address a key element:<br /><i>timing</i>.
 					</p>
 					<p class="flex-1 mb-2 md:text-lg">
 						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — takes care
@@ -161,13 +164,13 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={bolt} scale={2} />
+								<Icon data={greaterOrEqual} scale={2} />
 							</div>
-							<span class="text-lg">Accelerate</span>
+							<span class="text-lg">Compare</span>
 						</h5>
 						<p>
-							Accelerate your time to offer by starting the interview process with your top choice
-							companies at the same time.
+							Start the interview process with your top choice companies at the same time to compare
+							the process, people, and offers apples-to-apples.
 						</p>
 					</li>
 				</ul>
