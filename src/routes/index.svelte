@@ -46,7 +46,7 @@
 		<div class="hero-content min-h-screen flex flex-row text-center text-neutral">
 			<div>
 				<div class="max-w-sm md:max-w-lg space-y-6">
-					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">timing matters.</h1>
+					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">intent matters.</h1>
 					<h1 class="text-3xl md:text-4xl lowercase">
 						<div class="h-12">
 							<span class="font-bold text-primary">N</span><span
@@ -69,17 +69,17 @@
 								style="font-size: {fontSize};">ater</span
 							>
 						</div>
-						gives timing back to candidates and companies
+						gives intent back to candidates and companies
 					</h1>
 					<p class="flex-1 mb-2 md:text-lg">
-						The proliferation of sourcing software has allowed companies to reach a broader set of
-						candidates than ever before, yet recruiting is still the number one pain point of
-						growing companies. At its core, recruiting is a matching problem, not a numbers game,
-						and the modern recruiting stack fails to address a key element:<br /><i>timing</i>.
+						Widespread use of sourcing software has let companies reach more candidates than ever
+						before, but growing companies still say recruiting is their number one pain point. At
+						its core, recruiting is a matching problem, not a numbers game, and the modern
+						recruiting stack fails to address a key element:<br /><i>intent</i>.
 					</p>
 					<p class="flex-1 mb-2 md:text-lg">
 						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — takes care
-						of timing for you.
+						of intent for you.
 					</p>
 				</div>
 				<div class="max-w-sm md:max-w-lg text-center mt-12">
