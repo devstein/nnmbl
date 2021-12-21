@@ -44,7 +44,7 @@
 			<div>
 				<div class="max-w-sm md:max-w-lg space-y-6">
 					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">timing matters.</h1>
-					<h1 class="text-3xl md:text-4xl lowercase font-mono">
+					<h1 class="text-3xl md:text-4xl lowercase">
 						<div class="h-12">
 							<span class="font-bold text-primary">N</span><span
 								class="letters"
@@ -75,15 +75,15 @@
 						recruiting stack fails to address a key element: <i>timing</i>.
 					</p>
 					<p class="flex-1 mb-2 md:text-lg">
-						not now, maybe later — <strong class="font-black font-mono text-primary">nnmbl</strong> —
-						takes care of timing for you.
+						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — takes care
+						of timing for you.
 					</p>
 				</div>
 				<div class="max-w-sm md:max-w-lg text-center mt-12">
 					<p class="text-sm md:text-base">
 						Be in touch.
 						<span>
-							Be <strong class="font-black font-mono text-primary">nnmbl</strong>.
+							Be <strong class="font-black text-primary">nnmbl</strong>.
 						</span>
 					</p>
 					<JoinWaitlist />
@@ -105,7 +105,7 @@
 					<p class="text-base-100">
 						As a candidate, your inbox has become inundated by emails. If you are actively looking
 						for a new role, this is fantastic. However, 99% of the time, you are not. <span
-							class="font-bold font-mono text-primary">nnbml</span
+							class="font-bold text-primary">nnbml</span
 						> manages your inbound opportunities when you aren't looking and provides a central, organized
 						location for them when you are.
 					</p>
@@ -114,7 +114,7 @@
 					class="max-w-xl lg:max-w-full grid grid-rows-4 grid-cols-1 gap-x-0 gap-y-4 lg:grid-rows-1 lg:grid-cols-5 lg:gap-x-4 lg:gap-y-0 text-base-100"
 				>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-accent text-center py-2">
+						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={replyAll} scale={2} />
 							</div>
@@ -126,7 +126,7 @@
 						</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-accent text-center py-2">
+						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={bellSlash} scale={2} />
 							</div>
@@ -138,7 +138,7 @@
 						</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-accent text-center py-2">
+						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={sitemap} scale={2} />
 							</div>
@@ -150,7 +150,7 @@
 						</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-accent text-center py-2">
+						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={volumeUp} scale={2} />
 							</div>
@@ -159,7 +159,7 @@
 						<p>Switch your status to active to notify companies your interested in.</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-accent text-center py-2">
+						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={bolt} scale={2} />
 							</div>
@@ -187,9 +187,8 @@
 						As a company, you spend countless hours sourcing and reaching out to qualified
 						candidates for open roles, but if you reach out at the wrong time when the candidate
 						isn't looking, you've just wasted time and energy.<br />
-						<span class="font-bold font-mono text-primary">nnbml</span> integrates with your existing
-						recruiting tools to automatically re-engage qualified candidates once they are ready for
-						a new opportunity.
+						<span class="font-bold text-primary">nnbml</span> integrates with your existing recruiting
+						tools to automatically re-engage qualified candidates once they are ready for a new opportunity.
 					</p>
 				</div>
 				<!-- <ul class="flex flex-col text-base-100 lg:flex-row lg:space-x-4"> -->
@@ -197,7 +196,7 @@
 					class="max-w-xl lg:max-w-full grid grid-rows-4 grid-cols-1 gap-x-0 gap-y-4 lg:grid-rows-1 lg:grid-cols-5 lg:gap-x-4 lg:gap-y-0 text-neutral"
 				>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-center text-secondary py-2">
+						<h5 class="flex align-items text-center text-secondary py-2">
 							<div class="mr-2">
 								<Icon data={smileO} scale={2} />
 							</div>
@@ -206,7 +205,7 @@
 						<p>Automatically re-engage candidates the moment they are actively looking.</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-center text-secondary py-2">
+						<h5 class="flex align-items text-center text-secondary py-2">
 							<div class="mr-2">
 								<Icon data={searchPlus} scale={2} />
 							</div>
@@ -218,7 +217,7 @@
 						</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-center py-2 text-secondary">
+						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
 								<Icon data={star} scale={2} />
 							</div>
@@ -230,7 +229,7 @@
 						</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-center py-2 text-secondary">
+						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
 								<Icon data={hourglass1} scale={2} />
 							</div>
@@ -239,7 +238,7 @@
 						<p>Save time by not worrying about what canddidates to follow up with when.</p>
 					</li>
 					<li class="rounded p-2">
-						<h5 class="flex align-items font-mono text-center py-2 text-secondary">
+						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
 								<Icon data={recycle} scale={2} />
 							</div>
@@ -258,7 +257,7 @@
 			<div class="w-full space-y-6 text-left">
 				<p class="text-3xl md:text-4xl">Be in touch.</p>
 				<p class="text-3xl md:text-4xl">
-					Be <strong class="font-black font-mono text-primary">nnmbl</strong>.
+					Be <strong class="font-black text-primary">nnmbl</strong>.
 				</p>
 				<JoinWaitlist />
 			</div>

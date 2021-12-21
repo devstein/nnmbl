@@ -45,7 +45,7 @@
 	{#if $success}
 		<div class="alert alert-success mt-2 md:text-lg">
 			<p class="block">
-				🚀 You're signed up! We'll let you know once <span class="font-bold font-mono text-primary"
+				🚀 You're signed up! We'll let you know once <span class="font-bold text-primary"
 					>nnmbl</span
 				> is ready for early access.
 			</p>
