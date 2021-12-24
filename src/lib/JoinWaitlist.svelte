@@ -43,8 +43,10 @@
 				error = data.message;
 				return;
 			}
+
 			// success!
 			submitted.set(true);
+			if (data.userExists) registered.set(true);
 		} catch (err) {
 			console.error(err);
 		} finally {

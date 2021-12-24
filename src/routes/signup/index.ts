@@ -7,6 +7,7 @@ interface PostSignUpRequest {
 	email: string;
 }
 
+const STATUS_CODE_ALREADY_REGISTERED = 400;
 const STATUS_CODE_INVALID_EMAIL = 422;
 
 export const post: RequestHandler<null, PostSignUpRequest> = async ({ body }) => {
@@ -21,15 +22,34 @@ export const post: RequestHandler<null, PostSignUpRequest> = async ({ body }) =>
 			}
 		};
 	}
+
+	const { data: signups } = await supabase
+		.from('signups')
+		.select('position_number')
+		.eq('email', email);
+
+	if (signups && signups.length !== 0) {
+		return {
+			body: {
+				userExists: true
+			}
+		};
+	}
+
 	// random temporary password
 	const password = randomBytes(24).toString('hex');
-
-	// TODO: check if user exists
-
 	const { error } = await supabase.auth.signUp({
 		email,
 		password
 	});
+
+	if (error?.status === STATUS_CODE_ALREADY_REGISTERED) {
+		return {
+			body: {
+				userExists: true
+			}
+		};
+	}
 
 	if (error?.status === STATUS_CODE_INVALID_EMAIL) {
 		return {
@@ -41,6 +61,7 @@ export const post: RequestHandler<null, PostSignUpRequest> = async ({ body }) =>
 	}
 
 	if (error) {
+		console.log('error signing up user', error);
 		return {
 			status: error.status,
 			body: {
