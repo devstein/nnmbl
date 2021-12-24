@@ -12,6 +12,8 @@ const config = {
 	],
 
 	kit: {
+		// https://github.com/sveltejs/kit/tree/master/packages/adapter-auto
+		// Supports Vercel, Netlify, Cloudfare out-of-the-box
 		adapter: adapter(),
 
 		// hydrate the <div id="svelte"> element in src/app.html
