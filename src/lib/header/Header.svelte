@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <header>
 	<nav class="navbar bg-base text-base-content">
 		<div class="flex-1 flex px-2  md:flex ">
@@ -13,6 +10,3 @@
 		</div>
 	</nav>
 </header>
-
-<style>
-</style>
