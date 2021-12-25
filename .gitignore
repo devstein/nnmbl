@@ -12,3 +12,8 @@ node_modules
 npm-debug.log*
 
 todos.md
+
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
+**/supabase/.env
