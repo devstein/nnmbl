@@ -1,11 +1,11 @@
 -- create table
 create table public.signups (
-  id uuid references auth.users not null,
-  position_number serial,
-  email text not null,
-  created_at timestamp with time zone default now(),
+    id uuid references auth.users not null,
+    position_number serial,
+    email text not null,
+    created_at timestamp with time zone default now(),
 
-  primary key (id)
+    primary key (id)
 );
 
 alter table public.signups enable row level security;
