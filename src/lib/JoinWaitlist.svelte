@@ -5,22 +5,43 @@
 	const registered = writable(false);
 </script>
 
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	import supabase from '$lib/supabase';
 
-	let email;
-	let error;
+	let email: string;
+	let error: string;
 	let submitting = false;
 
-	onMount(() => {
+	const parseAuthHash = (hash: string): string => {
+		const params = hash.split('&');
+
+		const accessTokenParam = params.filter((s) => s.includes('access_token'))[0];
+		if (!accessTokenParam) return '';
+
+		const accessToken = accessTokenParam.split('=')[1] || '';
+		return accessToken;
+	};
+
+	onMount(async () => {
+		// on initial email confirmationn,
+		// we need to manualy get the user via the auth redirect params
+		// if successful, it will be picked up by the following call to
+		// supabase.auth.user()
+		const accessToken = parseAuthHash(window.location.hash);
+		if (accessToken) {
+			try {
+				await supabase.auth.api.getUser(accessToken);
+			} catch (err) {
+				console.error(err);
+			}
+		}
+
 		const user = supabase.auth.user();
 
 		registered.set(Boolean(user));
 	});
-
-	// DO WE DO THIS: define load function
 
 	export const handleSubmit = async () => {
 		// reset error on submit
