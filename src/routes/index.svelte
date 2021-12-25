@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	import Icon from 'svelte-awesome/components/Icon.svelte';
@@ -21,8 +21,8 @@
 	const MD_BREAKPOINT = 768;
 	const SHRINK_ANIMATION_DELAY = 2000;
 
-	export let windowWidth;
-	export let fontSize;
+	let windowWidth: number;
+	let fontSize: string;
 
 	onMount(() => {
 		fontSize = windowWidth > MD_BREAKPOINT ? '2.25rem' : '1.75rem';
