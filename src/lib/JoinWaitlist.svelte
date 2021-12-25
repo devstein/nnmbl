@@ -8,7 +8,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	import supabase from '$lib/supabase';
+	import { browserClient as supabase } from '$lib/supabase';
 
 	let email: string;
 	let error: string;

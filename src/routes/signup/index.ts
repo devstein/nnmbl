@@ -1,7 +1,7 @@
 import { randomBytes } from 'crypto';
 
 import type { RequestHandler } from '@sveltejs/kit';
-import supabase from '$lib/supabase';
+import { serverClient as supabase } from '$lib/supabase';
 
 interface PostSignUpRequest {
 	email: string;
@@ -23,10 +23,7 @@ export const post: RequestHandler<null, PostSignUpRequest> = async ({ body }) =>
 		};
 	}
 
-	const { data: signups } = await supabase
-		.from('signups')
-		.select('position_number')
-		.eq('email', email);
+	const { data: signups } = await supabase.from('signups').select('*').match({ email });
 
 	if (signups && signups.length !== 0) {
 		return {

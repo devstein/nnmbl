@@ -1,8 +1,9 @@
 import { createClient } from '@supabase/supabase-js';
 
 const url = import.meta.env.VITE_SUPABASE_URL;
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-const supabase = createClient(url, key);
+const anonRoleKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const serviceRoleKey = import.meta.env.VITE_SUPABASE_SERVICE_KEY;
 
-export default supabase;
+export const browserClient = createClient(url, anonRoleKey);
+export const serverClient = createClient(url, serviceRoleKey);
