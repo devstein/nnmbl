@@ -19,13 +19,15 @@
 	import JoinWaitlist from '$lib/JoinWaitlist.svelte';
 
 	const MD_BREAKPOINT = 768;
+	const DESKTOP_FONT_SIZE = '2.75rem';
+	const MOBILE_FONT_SIZE = '2.25rem';
 	const SHRINK_ANIMATION_DELAY = 2000;
 
 	let windowWidth: number;
 	let fontSize: string;
 
 	onMount(() => {
-		fontSize = windowWidth > MD_BREAKPOINT ? '2.25rem' : '1.75rem';
+		fontSize = windowWidth > MD_BREAKPOINT ? DESKTOP_FONT_SIZE : MOBILE_FONT_SIZE;
 
 		const timer = setTimeout(() => {
 			fontSize = '0rem';
@@ -45,9 +47,8 @@
 	<div class="hero bg-neutral-content snap-start lg:snap-center" id="main">
 		<div class="hero-content min-h-screen flex flex-row text-center text-neutral">
 			<div>
-				<div class="max-w-sm md:max-w-lg space-y-6">
-					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">intent matters.</h1>
-					<h1 class="text-3xl md:text-4xl lowercase">
+				<div class="max-w-md md:max-w-xl space-y-4">
+					<h1 class="text-4xl md:text-5xl lowercase">
 						<div class="h-12">
 							<span class="font-bold text-primary">N</span><span
 								class="letters"
@@ -69,20 +70,26 @@
 								style="font-size: {fontSize};">ater</span
 							>
 						</div>
-						gives intent back to candidates and companies
 					</h1>
-					<p class="flex-1 mb-2 md:text-lg">
-						Widespread use of sourcing software has let companies reach more candidates than ever
-						before, but growing companies still say recruiting is their number one pain point. At
-						its core, recruiting is a matching problem, not a numbers game, and the modern
-						recruiting stack fails to address a key element:<br /><i>intent</i>.
+					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">
+						recruiting emails only when you want them
+					</h1>
+					<p class="flex-1 md:text-lg">
+						Sourcing software lets companies reach more candidates than ever before, but growing
+						companies still say recruiting is their number one pain point. At its core, recruiting
+						is a matching problem, not a numbers game.
+					</p>
+					<p class="flex-1 md:text-lg">
+						The modern recruiting stack fails to address a key element:<br /><i
+							>if the timing is right for the candidate</i
+						>.
 					</p>
 					<p class="flex-1 mb-2 md:text-lg">
-						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — takes care
-						of intent for you.
+						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — manages timing
+						for canndidates and companies.
 					</p>
 				</div>
-				<div class="max-w-sm md:max-w-lg text-center mt-12">
+				<div class="max-w-md md:max-w-xl text-center mt-12">
 					<p class="text-sm md:text-base">
 						Be in touch.
 						<span>
@@ -188,13 +195,12 @@
 					<h3 class="text-4xl md:text-5xl text-left text-secondary py-8">Companies</h3>
 					<p class="text-neutral">
 						As a company, you spend countless hours sourcing and reaching out to qualified
-						candidates for open roles, but if you reach out at the wrong time when the candidate
-						isn't looking, you've just wasted time and energy.<br />
+						candidates, but if you reach out at the wrong time when the candidate isn't looking,
+						you've just wasted time and energy.<br />
 						<span class="font-bold text-primary">nnbml</span> integrates with your existing recruiting
 						tools to automatically re-engage qualified candidates once they are ready for a new opportunity.
 					</p>
 				</div>
-				<!-- <ul class="flex flex-col text-base-100 lg:flex-row lg:space-x-4"> -->
 				<ul
 					class="max-w-xl lg:max-w-full grid grid-rows-4 grid-cols-1 gap-x-0 gap-y-4 lg:grid-rows-1 lg:grid-cols-5 lg:gap-x-4 lg:gap-y-0 text-neutral"
 				>
