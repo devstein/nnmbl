@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^1.29.0",
 		"daisyui": "^1.16.6",
+		"esbuild": "^0.14.8",
 		"svelte-awesome": "^2.4.2"
 	}
 }
