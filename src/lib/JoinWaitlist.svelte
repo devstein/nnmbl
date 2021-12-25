@@ -5,7 +5,7 @@
 	const registered = writable(false);
 </script>
 
-<script lang="typescript">
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	import supabase from '$lib/supabase';
