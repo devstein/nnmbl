@@ -24,7 +24,7 @@ GRANT EXECUTE ON FUNCTION public.handle_new_verified_user() TO authenticated;
 
 GRANT EXECUTE ON FUNCTION public.handle_new_verified_user() TO postgres;
 
-GRANT EXECUTE ON FUNCTION public.handle_new_verified_user() TO PUBLIC;
+GRANT EXECUTE ON FUNCTION public.handle_new_verified_user() TO public;
 
 GRANT EXECUTE ON FUNCTION public.handle_new_verified_user() TO anon;
 
@@ -45,10 +45,10 @@ CREATE TABLE IF NOT EXISTS public.signups
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.signups
+ALTER TABLE if EXISTS public.signups
 OWNER to postgres;
 
-ALTER TABLE IF EXISTS public.signups
+ALTER TABLE if EXISTS public.signups
 ENABLE ROW LEVEL SECURITY;
 
 GRANT ALL ON TABLE public.signups TO anon;
