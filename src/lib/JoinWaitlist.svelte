@@ -40,7 +40,10 @@
 
 		const user = supabase.auth.user();
 
+		console.log(user);
 		registered.set(Boolean(user));
+
+		if (user) window.heap.identify(user.email);
 	});
 
 	export const handleSubmit = async () => {
@@ -67,7 +70,10 @@
 
 			// success!
 			submitted.set(true);
-			if (data.userExists) registered.set(true);
+			if (data.userExists) {
+				registered.set(true);
+				window.heap.identify(email);
+			}
 		} catch (err) {
 			console.error(err);
 		} finally {
