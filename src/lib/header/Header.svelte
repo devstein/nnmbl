@@ -1,3 +1,10 @@
+<script>
+	import Icon from 'svelte-awesome/components/Icon.svelte';
+	import { github } from 'svelte-awesome/icons';
+
+	const ICON_SIZE = 2;
+</script>
+
 <header>
 	<nav class="navbar bg-base text-base-content">
 		<div class="flex-1 flex px-2  md:flex ">
@@ -7,6 +14,14 @@
 			<a class="hover:text-primary-focus" href="#candidates">Candidates</a>
 			<a class="hover:text-primary-focus" href="#companies">Companies</a>
 			<a class="hover:text-primary-focus" href="#join">Join</a>
+			<a
+				class="hover:text-primary-focus"
+				rel="external"
+				href="https://github.com/devstein/nnmbl"
+				target="_blank"
+			>
+				<Icon data={github} scale={ICON_SIZE} />
+			</a>
 		</div>
 	</nav>
 </header>
