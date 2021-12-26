@@ -12,7 +12,8 @@ const STATUS_CODE_INVALID_EMAIL = 422;
 
 export const post: RequestHandler<null, PostSignUpRequest> = async ({ body }) => {
 	// validate request body
-	const { email } = body;
+	let { email } = body;
+	email = email.trim();
 
 	if (!email) {
 		return {
