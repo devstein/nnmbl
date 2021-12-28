@@ -1,24 +1,22 @@
-# create-svelte
+# [nnmbl](https://nnmbl.xyz) - not now, maybe later
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+## Motivation
 
-## Creating a project
+Like many Software Engineers, recruiting is a regular part of my day-to-day life. Both as a candidate combing through inbound recruiting emails and as the Head of Apps Engineering searching for exceptional engineers to join our team at [Viaduct](https://viaduct.ai/). I have always found the background noise of daily recruiting emails acceptable, but the recent explosion of sourcing software, like Gem, changed this. Sourcing software allows companies to run mass email campaigns using candidates' personal information, like email addresses and phone numbers. The benefit to companies is clear: direct access to candidates' inboxes; however, the consequence for candidates is less than ideal.
 
-If you're seeing this, you've probably already done this step. Congrats!
+If you are looking for a new opportunity, the increase in inbound recruiting emails is welcome, but most candidates are not. For these candidates, the daily onslaught of emails resembles spam. Despite drastically different experiences, the only difference between these candidates is timing. Once a candidate is back on the market for a new position, these recruiting emails transform from a source of spam to a way to discover and connect with diverse companies.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+The experience for companies reflects candidates'. Recruiters spend countless hours sourcing qualified candidates, but if the candidate isn't looking for a new role when the recruiter reaches out, sourcing software or not, the sourcing time is a sunk cost. The best-case scenario is the candidate responds to let you know that the timing isn't right, which then shifts the burden back to the company to reach back out. There is an overhead for recruiters in managing which candidates they need to follow up with and at what time. Worse yet, if a recruiter reaches out to a candidate again and the candidate still isn't looking, this cycle continues, reducing recruiting efficiency.
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+Without accounting for timing, outbound recruiting wastes both candidates' and companies' time. I've been a victim of these inefficiencies as a candidate and a recruiter, so I decided to do as engineers do and build myself a solution. Not now, maybe later, or [nnmbl](https://nnmbl.xyz) (pronounced "nimble") manages your inbound recruiting emails when you aren't looking for a new opportunity and organizes them, so they are accessible to you when you are.
 
-> Note: the `@next` is temporary
+nnmbl is still a work in progress, so I've created this Github repo and [landing page](https://nnmbl.xyz) to see if other people think this would be useful to them while I'm building it out. If you are interested, please [join the waitlist](https://nnmbl.xyz)!
 
-## Developing
+## Contributing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Developing
+
+Installed dependencies with `npm install`
 
 ```bash
 npm run dev
@@ -27,12 +25,10 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
 ```bash
 npm run build
 ```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
