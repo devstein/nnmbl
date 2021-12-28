@@ -18,6 +18,7 @@
 
 	import JoinWaitlist from '$lib/JoinWaitlist.svelte';
 
+	const ICON_SIZE = 2;
 	const MD_BREAKPOINT = 768;
 	const DESKTOP_FONT_SIZE = '2.75rem';
 	const MOBILE_FONT_SIZE = '2.25rem';
@@ -126,7 +127,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={replyAll} scale={2} />
+								<Icon data={replyAll} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Reply</span>
 						</h5>
@@ -138,7 +139,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={bellSlash} scale={2} />
+								<Icon data={bellSlash} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Eliminate</span>
 						</h5>
@@ -150,7 +151,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={sitemap} scale={2} />
+								<Icon data={sitemap} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Organize</span>
 						</h5>
@@ -162,7 +163,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={volumeUp} scale={2} />
+								<Icon data={volumeUp} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Notify</span>
 						</h5>
@@ -171,7 +172,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
-								<Icon data={greaterOrEqual} scale={2} />
+								<Icon data={greaterOrEqual} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Compare</span>
 						</h5>
@@ -207,7 +208,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-center text-secondary py-2">
 							<div class="mr-2">
-								<Icon data={smileO} scale={2} />
+								<Icon data={smileO} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Engage</span>
 						</h5>
@@ -216,7 +217,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-center text-secondary py-2">
 							<div class="mr-2">
-								<Icon data={searchPlus} scale={2} />
+								<Icon data={searchPlus} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Discover</span>
 						</h5>
@@ -228,7 +229,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
-								<Icon data={star} scale={2} />
+								<Icon data={star} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Maximize</span>
 						</h5>
@@ -240,7 +241,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
-								<Icon data={hourglass1} scale={2} />
+								<Icon data={hourglass1} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Focus</span>
 						</h5>
@@ -249,7 +250,7 @@
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
-								<Icon data={recycle} scale={2} />
+								<Icon data={recycle} scale={ICON_SIZE} />
 							</div>
 							<span class="text-lg">Integrate</span>
 						</h5>

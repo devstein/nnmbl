@@ -25,7 +25,7 @@
 	};
 
 	onMount(async () => {
-		// on initial email confirmationn,
+		// on initial email confirmation,
 		// we need to manualy get the user via the auth redirect params
 		// if successful, it will be picked up by the following call to
 		// supabase.auth.user()
@@ -117,7 +117,11 @@
 	{/if}
 	{#if $submitted && !$registered}
 		<div class="alert alert-info mt-2 md:text-lg">
-			<p class="block">🚀 You're almost there! Confirm your email to join the waitlist.</p>
+			<p class="block">
+				🚀 You're almost there! A confirmation email has been sent to {email}. Follow the
+				instructions in the confirmation email to join the waitlist. If you don't see a confirmation
+				email, please check your spam folder or reach out at contact@nnmbl.xyz
+			</p>
 		</div>
 	{/if}
 	{#if $registered}
