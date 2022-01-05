@@ -87,7 +87,7 @@
 					</p>
 					<p class="flex-1 mb-2 md:text-lg">
 						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — manages timing
-						for canndidates and companies.
+						for candidates and companies.
 					</p>
 				</div>
 				<div class="max-w-md md:max-w-xl text-center mt-12">
