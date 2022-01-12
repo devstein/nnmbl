@@ -73,6 +73,8 @@
 				registered.set(true);
 				window.heap.identify(email);
 			}
+			// @ts-ignore
+			gtag('event', 'conversion', { send_to: 'AW-973253532/JgjaCN2tsZADEJzXitAD' });
 		} catch (err) {
 			console.error(err);
 		} finally {
