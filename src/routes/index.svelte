@@ -167,7 +167,7 @@
 							</div>
 							<span class="text-lg">Notify</span>
 						</h5>
-						<p>Switch you're status to active to notify companies your interested in.</p>
+						<p>Switch your status to active to notify companies you are interested in.</p>
 					</li>
 					<li class="rounded p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
