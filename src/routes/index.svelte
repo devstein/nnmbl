@@ -116,7 +116,7 @@
 					<p class="text-base-100">
 						As a candidate, your inbox has become inundated by emails. If you are actively looking
 						for a new role, this is fantastic. However, 99% of the time, you are not. <span
-							class="font-bold text-primary">nnbml</span
+							class="font-bold text-primary">nnmbl</span
 						> manages your inbound opportunities when you aren't looking and provides a central, organized
 						location for them when you are.
 					</p>
@@ -198,7 +198,7 @@
 						As a company, you spend countless hours sourcing and reaching out to qualified
 						candidates, but if you reach out at the wrong time when the candidate isn't looking,
 						you've just wasted time and energy.<br />
-						<span class="font-bold text-primary">nnbml</span> integrates with your existing recruiting
+						<span class="font-bold text-primary">nnmbl</span> integrates with your existing recruiting
 						tools to automatically re-engage qualified candidates once they are ready for a new opportunity.
 					</p>
 				</div>
