@@ -74,7 +74,11 @@
 				window.heap.identify(email);
 			}
 			// @ts-ignore
-			gtag('event', 'conversion', { send_to: 'AW-973253532/JgjaCN2tsZADEJzXitAD' });
+			if (window.gtag)
+				// @ts-ignore
+				window.gtag('event', 'conversion', { send_to: 'AW-973253532/JgjaCN2tsZADEJzXitAD' });
+			// @ts-ignore
+			if (window.fbq) window.fbq('track', 'CompleteRegistration');
 		} catch (err) {
 			console.error(err);
 		} finally {
