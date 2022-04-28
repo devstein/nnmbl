@@ -17,6 +17,7 @@
 
 	import greaterOrEqual from '$lib/greaterOrEqual';
 
+	import Footer from '$lib/footer/Footer.svelte';
 	import JoinWaitlist from '$lib/JoinWaitlist.svelte';
 
 	const ICON_SIZE = 2;
@@ -27,16 +28,38 @@
 
 	let windowWidth: number;
 	let fontSize: string;
+	let isDesktop: boolean = true;
+	let headerVisible: boolean = true;
 
 	onMount(() => {
-		fontSize = windowWidth > MD_BREAKPOINT ? DESKTOP_FONT_SIZE : MOBILE_FONT_SIZE;
+		isDesktop = windowWidth > MD_BREAKPOINT;
+		fontSize = isDesktop ? DESKTOP_FONT_SIZE : MOBILE_FONT_SIZE;
 
 		const timer = setTimeout(() => {
 			fontSize = '0rem';
 		}, SHRINK_ANIMATION_DELAY);
 
+		const headerEl = document.getElementById('header');
+
+		const observer = new IntersectionObserver(
+			([{ intersectionRatio }]) => {
+				headerVisible = intersectionRatio === 1;
+			},
+			{ threshold: [1] }
+		);
+
+		observer.observe(headerEl);
+
 		return () => clearTimeout(timer);
 	});
+
+	const scrollToPage = (hash: 'candidates' | 'companies' | 'join') => {
+		const el = document.getElementById(hash);
+
+		if (!el) return;
+
+		el.scrollIntoView({ behavior: 'smooth' });
+	};
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -46,7 +69,7 @@
 </svelte:head>
 
 <section class="md:snap-y md:snap-mandatory scroll-auto h-screen overflow-auto	">
-	<div class="hero bg-neutral-content snap-start lg:snap-center" id="main">
+	<div class="hero bg-neutral-content snap-start lg:snap-center relative" id="main">
 		<div class="hero-content min-h-screen flex flex-row text-left text-neutral">
 			<div>
 				<div class="max-w-md md:max-w-xl space-y-4">
@@ -111,18 +134,36 @@
 				</div>
 			</div>
 		</div>
+		<button
+			id="scroll-next-landing"
+			on:click={() => scrollToPage('candidates')}
+			class="absolute {headerVisible && isDesktop
+				? 'bottom-16'
+				: 'bottom-0'} animate-bounce bg-slate-800 p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-200/20 shadow-lg rounded-full"
+		>
+			<svg
+				class="w-4 h-4 md:w-6 md:h-6 text-accent"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+			</svg>
+		</button>
 	</div>
 
 	<!--For candidates -->
 	<!-- try use snap scroll for each section -->
-	<div class="hero bg-base-content snap-start lg:snap-center" id="candidates">
+	<div class="hero bg-base-content snap-start lg:snap-center relative" id="candidates">
 		<div
-			class="hero-content min-h-screen flex flex-col-reverse text-left lg:flex-row-reverse lg:space-x-4"
+			class="hero-content min-h-screen flex flex-col-reverse text-left lg:flex-row-reverse lg:space-x-4 mb-4 lg:mb-0"
 		>
 			<div class="">
 				<div class="md:max-w-xl md:mb-8 mb-12">
 					<h3 class="text-4xl md:text-5xl text-left text-accent py-8">Candidates</h3>
-					<!-- <ul class="flex flex-col text-base-100 lg:flex-row lg:space-x-4"> -->
 					<p class="text-base-100">
 						As a candidate, your inbox has become inundated by emails. If you are actively looking
 						for a new role, this is fantastic. However, 99% of the time, you are not. <span
@@ -134,7 +175,7 @@
 				<ul
 					class="max-w-xl lg:max-w-full grid grid-rows-4 grid-cols-1 gap-x-0 gap-y-4 lg:grid-rows-1 lg:grid-cols-5 lg:gap-x-4 lg:gap-y-0 text-base-100"
 				>
-					<li class="rounded p-2">
+					<li class="rounded px-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={replyAll} scale={ICON_SIZE} />
@@ -146,7 +187,7 @@
 							reach out in the future.
 						</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={bellSlash} scale={ICON_SIZE} />
@@ -158,7 +199,7 @@
 							organized for future access.
 						</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={sitemap} scale={ICON_SIZE} />
@@ -170,7 +211,7 @@
 							you are ready for something new.
 						</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={volumeUp} scale={ICON_SIZE} />
@@ -179,7 +220,7 @@
 						</h5>
 						<p>Switch your status to active to notify companies you are interested in.</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-accent text-center py-2">
 							<div class="mr-2">
 								<Icon data={greaterOrEqual} scale={ICON_SIZE} />
@@ -194,12 +235,31 @@
 				</ul>
 			</div>
 		</div>
+		<button
+			id="scroll-next-candidates"
+			on:click={() => scrollToPage('companies')}
+			class="absolute {headerVisible && isDesktop
+				? 'bottom-16'
+				: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
+		>
+			<svg
+				class="w-4 h-4 md:w-6 md:h-6 text-secondary"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+			</svg>
+		</button>
 	</div>
 
 	<!--For companies -->
-	<div class="hero bg-neutral-content snap-start lg:snap-center" id="companies">
+	<div class="hero bg-neutral-content snap-start lg:snap-center relative" id="companies">
 		<div
-			class="hero-content min-h-screen flex flex-col-reverse text-left text-neutral lg:flex-row lg:space-x-4"
+			class="hero-content min-h-screen flex flex-col-reverse text-left text-neutral lg:flex-row lg:space-x-4 mb-4 lg:mb-0"
 		>
 			<div class="">
 				<div class="md:max-w-xl md:mb-8 mb-12">
@@ -215,7 +275,7 @@
 				<ul
 					class="max-w-xl lg:max-w-full grid grid-rows-4 grid-cols-1 gap-x-0 gap-y-4 lg:grid-rows-1 lg:grid-cols-5 lg:gap-x-4 lg:gap-y-0 text-neutral"
 				>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-center text-secondary py-2">
 							<div class="mr-2">
 								<Icon data={smileO} scale={ICON_SIZE} />
@@ -224,7 +284,7 @@
 						</h5>
 						<p>Automatically re-engage candidates the moment they are actively looking.</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-center text-secondary py-2">
 							<div class="mr-2">
 								<Icon data={searchPlus} scale={ICON_SIZE} />
@@ -236,7 +296,7 @@
 							for a new opportunity.
 						</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
 								<Icon data={star} scale={ICON_SIZE} />
@@ -248,7 +308,7 @@
 							the timing isn't right.
 						</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
 								<Icon data={hourglass1} scale={ICON_SIZE} />
@@ -257,7 +317,7 @@
 						</h5>
 						<p>Save time by not worrying about what canddidates to follow up with when.</p>
 					</li>
-					<li class="rounded p-2">
+					<li class="px-2 lg:p-2">
 						<h5 class="flex align-items text-center py-2 text-secondary">
 							<div class="mr-2">
 								<Icon data={recycle} scale={ICON_SIZE} />
@@ -269,6 +329,25 @@
 				</ul>
 			</div>
 		</div>
+		<button
+			id="scroll-next-companies"
+			on:click={() => scrollToPage('join')}
+			class="absolute {headerVisible && isDesktop
+				? 'bottom-16'
+				: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
+		>
+			<svg
+				class="w-4 h-4 md:w-6 md:h-6 text-primary"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+			</svg>
+		</button>
 	</div>
 
 	<!--Be nnmbl -->
@@ -283,6 +362,7 @@
 			</div>
 		</div>
 	</div>
+	<Footer />
 </section>
 
 <style>

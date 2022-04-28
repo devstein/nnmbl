@@ -5,7 +5,7 @@
 	const ICON_SIZE = 2;
 </script>
 
-<header>
+<header id="header">
 	<nav class="navbar bg-base text-base-content">
 		<div class="flex-1 flex px-2  md:flex ">
 			<a href="#main" class="md:text-lg font-bold text-primary hover:text-primary-focus">nnmbl</a>
