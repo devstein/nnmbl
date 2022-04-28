@@ -105,7 +105,11 @@
 					class="input input-primary shadow flex-1 rounded-r-none"
 					class:input-error={error}
 				/>
-				<button type="submit" class="btn btn-primary shadow rounded-l-none" disabled={submitting}>
+				<button
+					type="submit"
+					class="btn btn-primary shadow rounded-l-none px-2 md:px-4"
+					disabled={submitting}
+				>
 					{#if !submitting}
 						Join the Waitlist
 					{/if}
