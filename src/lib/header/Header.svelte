@@ -10,7 +10,9 @@
 		<div class="flex-1 flex px-2  md:flex ">
 			<a href="#main" class="md:text-lg font-bold text-primary hover:text-primary-focus">nnmbl</a>
 		</div>
-		<div class="flex text-sm md:text-base md:flex flex-none px-2 space-x-4 font-semibold ">
+		<div
+			class="flex text-sm md:text-base md:flex flex-none px-2 space-x-2 md:space-x-4 font-semibold "
+		>
 			<a class="hover:text-primary-focus" href="#candidates">Candidates</a>
 			<a class="hover:text-primary-focus" href="#companies">Companies</a>
 			<a class="hover:text-primary-focus" href="#join">Join</a>
