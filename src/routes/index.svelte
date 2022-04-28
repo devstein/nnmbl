@@ -11,7 +11,8 @@
 		bellSlash,
 		sitemap,
 		volumeUp,
-		smileO
+		smileO,
+		longArrowRight
 	} from 'svelte-awesome/icons';
 
 	import greaterOrEqual from '$lib/greaterOrEqual';
@@ -46,7 +47,7 @@
 
 <section class="md:snap-y md:snap-mandatory scroll-auto h-screen overflow-auto	">
 	<div class="hero bg-neutral-content snap-start lg:snap-center" id="main">
-		<div class="hero-content min-h-screen flex flex-row text-center text-neutral">
+		<div class="hero-content min-h-screen flex flex-row text-left text-neutral">
 			<div>
 				<div class="max-w-md md:max-w-xl space-y-4">
 					<h1 class="text-4xl md:text-5xl lowercase">
@@ -75,6 +76,7 @@
 					<h1 class="text-4xl md:text-5xl font-bold text-secondary pb-4">
 						recruiting emails only when you want them
 					</h1>
+					<!--
 					<p class="flex-1 md:text-lg">
 						Sourcing software lets companies reach more candidates than ever before, but growing
 						companies still say recruiting is their number one pain point. At its core, recruiting
@@ -85,12 +87,13 @@
 							>if the timing is right for the candidate</i
 						>.
 					</p>
+					-->
 					<p class="flex-1 mb-2 md:text-lg">
 						not now, maybe later — <strong class="font-black text-primary">nnmbl</strong> — is an email
 						plug-in and recruiting platform that manages timing for candidates and companies.
 					</p>
 				</div>
-				<div class="max-w-md md:max-w-xl text-center mt-12">
+				<div class="max-w-md md:max-w-xl text-left mt-10">
 					<p class="text-sm md:text-base">
 						Be in touch.
 						<span>
@@ -98,6 +101,13 @@
 						</span>
 					</p>
 					<JoinWaitlist />
+				</div>
+				<div class="max-w-md md:max-w-xl text-left mt-4 text-sm md:text-base">
+					Want to know how it works?
+					<a class="link link-secondary" href="#candidates"
+						>Learn more
+						<Icon data={longArrowRight} scale={1} />
+					</a>
 				</div>
 			</div>
 		</div>
