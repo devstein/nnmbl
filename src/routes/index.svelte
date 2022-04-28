@@ -110,7 +110,7 @@
 			class="hero-content min-h-screen flex flex-col-reverse text-left lg:flex-row-reverse lg:space-x-4"
 		>
 			<div class="">
-				<div class="md:max-w-xl mb-5">
+				<div class="md:max-w-xl md:mb-8 mb-12">
 					<h3 class="text-4xl md:text-5xl text-left text-accent py-8">Candidates</h3>
 					<!-- <ul class="flex flex-col text-base-100 lg:flex-row lg:space-x-4"> -->
 					<p class="text-base-100">
@@ -192,7 +192,7 @@
 			class="hero-content min-h-screen flex flex-col-reverse text-left text-neutral lg:flex-row lg:space-x-4"
 		>
 			<div class="">
-				<div class="max-w-xl mb-5">
+				<div class="md:max-w-xl md:mb-8 mb-12">
 					<h3 class="text-4xl md:text-5xl text-left text-secondary py-8">Companies</h3>
 					<p class="text-neutral">
 						As a company, you spend countless hours sourcing and reaching out to qualified
