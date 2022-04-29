@@ -126,11 +126,9 @@
 					<JoinWaitlist />
 				</div>
 				<div class="max-w-md md:max-w-xl text-left mt-4 text-sm md:text-base">
-					Want to know how it works?
-					<a class="link link-secondary" href="#candidates"
-						>Learn more
-						<Icon data={longArrowRight} scale={1} />
-					</a>
+					Want to know how it works? Learn more about
+					<a class="link link-primary" href="#candidates">candidates</a> or
+					<a class="link link-secondary" href="#companies">companies</a>.
 				</div>
 			</div>
 		</div>
