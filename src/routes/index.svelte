@@ -132,25 +132,27 @@
 				</div>
 			</div>
 		</div>
-		<button
-			id="scroll-next-landing"
-			on:click={() => scrollToPage('candidates')}
-			class="absolute {headerVisible && isDesktop
-				? 'bottom-16'
-				: 'bottom-0'} animate-bounce bg-slate-800 p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-200/20 shadow-lg rounded-full"
-		>
-			<svg
-				class="w-4 h-4 md:w-6 md:h-6 text-accent"
-				fill="none"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
+		{#if isDesktop}
+			<button
+				id="scroll-next-landing"
+				on:click={() => scrollToPage('candidates')}
+				class="absolute {headerVisible
+					? 'bottom-16'
+					: 'bottom-0'} animate-bounce bg-slate-800 p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-200/20 shadow-lg rounded-full"
 			>
-				<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-			</svg>
-		</button>
+				<svg
+					class="w-4 h-4 md:w-6 md:h-6 text-accent"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+				</svg>
+			</button>
+		{/if}
 	</div>
 
 	<!--For candidates -->
@@ -233,25 +235,27 @@
 				</ul>
 			</div>
 		</div>
-		<button
-			id="scroll-next-candidates"
-			on:click={() => scrollToPage('companies')}
-			class="absolute {headerVisible && isDesktop
-				? 'bottom-16'
-				: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
-		>
-			<svg
-				class="w-4 h-4 md:w-6 md:h-6 text-secondary"
-				fill="none"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
+		{#if isDesktop}
+			<button
+				id="scroll-next-candidates"
+				on:click={() => scrollToPage('companies')}
+				class="absolute {headerVisible
+					? 'bottom-16'
+					: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
 			>
-				<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-			</svg>
-		</button>
+				<svg
+					class="w-4 h-4 md:w-6 md:h-6 text-secondary"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+				</svg>
+			</button>
+		{/if}
 	</div>
 
 	<!--For companies -->
@@ -327,25 +331,27 @@
 				</ul>
 			</div>
 		</div>
-		<button
-			id="scroll-next-companies"
-			on:click={() => scrollToPage('join')}
-			class="absolute {headerVisible && isDesktop
-				? 'bottom-16'
-				: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
-		>
-			<svg
-				class="w-4 h-4 md:w-6 md:h-6 text-primary"
-				fill="none"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
+		{#if isDesktop}
+			<button
+				id="scroll-next-companies"
+				on:click={() => scrollToPage('join')}
+				class="absolute {headerVisible
+					? 'bottom-16'
+					: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
 			>
-				<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-			</svg>
-		</button>
+				<svg
+					class="w-4 h-4 md:w-6 md:h-6 text-primary"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+				</svg>
+			</button>
+		{/if}
 	</div>
 
 	<!--Be nnmbl -->
