@@ -1,5 +1,9 @@
 # [nnmbl](https://nnmbl.xyz) - not now, maybe later
 
+## Notice
+
+nnmbl is now part of the Shared Recruiting Co. (SRC), an open source, candidate-centric recruiting platform. Checkout the SRC [Github repo](https://github.com/shared-recruiting-co/shared-recruiting-co) or [website](https://sharedrecruitng.co) to learn more!
+
 ## Motivation
 
 Like many Software Engineers, recruiting is a regular part of my day-to-day life. Both as a candidate combing through inbound recruiting emails and as the Head of Apps Engineering searching for exceptional engineers to join our team at [Viaduct](https://viaduct.ai/). I have always found the background noise of daily recruiting emails acceptable, but the recent explosion of sourcing software, like Gem, changed this. Sourcing software allows companies to run mass email campaigns using candidates' personal information, like email addresses and phone numbers. The benefit to companies is clear: direct access to candidates' inboxes; however, the consequence for candidates is less than ideal.
