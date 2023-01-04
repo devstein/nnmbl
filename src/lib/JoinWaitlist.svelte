@@ -105,18 +105,12 @@
 					class="input input-primary shadow flex-1 rounded-r-none"
 					class:input-error={error}
 				/>
-				<button
-					type="submit"
+				<a
+					href="https://sharedrecruiting.co"
 					class="btn btn-primary shadow rounded-l-none px-2 md:px-4"
-					disabled={submitting}
 				>
-					{#if !submitting}
-						Join the Waitlist
-					{/if}
-					{#if submitting}
-						Submitting...
-					{/if}
-				</button>
+					Join the Waitlist
+				</a>
 			</div>
 			{#if error}
 				<label class="label" for="email">

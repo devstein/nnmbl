@@ -137,7 +137,7 @@
 				id="scroll-next-landing"
 				on:click={() => scrollToPage('candidates')}
 				class="absolute {headerVisible
-					? 'bottom-16'
+					? 'bottom-32'
 					: 'bottom-0'} animate-bounce bg-slate-800 p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-200/20 shadow-lg rounded-full"
 			>
 				<svg
@@ -240,7 +240,7 @@
 				id="scroll-next-candidates"
 				on:click={() => scrollToPage('companies')}
 				class="absolute {headerVisible
-					? 'bottom-16'
+					? 'bottom-32'
 					: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
 			>
 				<svg
@@ -336,7 +336,7 @@
 				id="scroll-next-companies"
 				on:click={() => scrollToPage('join')}
 				class="absolute {headerVisible
-					? 'bottom-16'
+					? 'bottom-32'
 					: 'bottom-0'} animate-bounce bg-white p-1 md:p-2 w-6 w-6 md:w-10 md:h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full"
 			>
 				<svg
